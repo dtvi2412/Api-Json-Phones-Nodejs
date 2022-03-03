@@ -106,6 +106,6 @@ app.get('/api/phones', (req, res) => {
     .json({ status: true, message: 'Get data successfully!', data: phones });
 });
 
-app.listen(process.env.PORT, () =>
+app.listen(process.env.PORT || 5000, () =>
   console.log(`Api running with PORT ${process.env.PORT}`)
 );
